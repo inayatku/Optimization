@@ -1,0 +1,32 @@
+Title: PERT Network Problem Implementation in C++
+
+Description: This C++ program calculates the expected time, variance, and critical path of a given set of tasks using the PERT (Program Evaluation and Review Technique) network problem. Each task has an ID, optimistic time, most likely time, pessimistic time, and a list of predecessor tasks that must be completed before it can begin.
+
+Structures:
+
+1. Task: Represents a task in the project.
+    - int id: Unique identifier of the task.
+    - int optimistic_time: Optimistic time estimate for the task.
+    - int most_likely_time: Most likely time estimate for the task.
+    - int pessimistic_time: Pessimistic time estimate for the task.
+    - std::vector<int> predecessors: List of predecessor tasks.
+    - double expected_time: The expected time for the task, calculated as (optimistic_time + 4 * most_likely_time + pessimistic_time) / 6.
+    - double variance: The variance for the task, calculated as ((pessimistic_time - optimistic_time) / 6)^2.
+
+Functions:
+
+1. int main()
+   - Entry point of the program.
+   - Initializes a vector of Task objects with task information.
+   - Calculates the expected time and variance for each task.
+   - Determines the earliest start time for each task.
+   - Finds the maximum duration (expected time) of the project.
+   - Determines the critical path based on the earliest start times.
+   - Prints the project duration (expected time) and critical path.
+
+Example Output:
+
+Project duration (expected time): 16.5
+Critical path: Task 0 -> Task 2 -> Task 4 -> Task 5 -> End
+
+This output indicates that the project will take an expected time of 16.5 units to complete, and the critical path consists of the sequence of tasks 0, 2, 4, and 5.

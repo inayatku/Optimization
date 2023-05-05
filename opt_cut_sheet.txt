@@ -1,0 +1,17 @@
+Title: 2D Cutting Sheet Problem
+
+Description:
+This program demonstrates a solution to the 2-dimensional cutting sheet problem, a variant of the optimal subdivision problem. The objective is to find the optimal way to cut a rectangular sheet of a given width and height into smaller rectangles, given the price of each possible rectangle. The goal is to maximize the total revenue obtained from selling the pieces.
+
+Files:
+- 2d_cutting_sheet.cpp: The main C++ source file containing the implementation of the program.
+
+Functions:
+- int cutSheet(const std::vector<std::vector<int>>& prices, int width, int height): A function that takes a 2D vector of prices, the width, and the height of the sheet as its arguments. It uses dynamic programming to calculate the maximum revenue that can be obtained by cutting the sheet into optimal rectangular pieces.
+- int main(): The main function that demonstrates the usage of the `cutSheet` function by calculating the maximum revenue for a sheet of width 4 and height 3.
+
+
+Customization and Improvements:
+- The dimensions of the sheet and the prices can be adjusted by modifying the `prices` vector and the `width` and `height` variables in the `main` function.
+- The code can be extended to handle more complex cutting patterns or more dimensions.
+- The code can be further improved by reading the prices and dimensions from a file or allowing user input for the prices and dimensions.

@@ -1,0 +1,25 @@
+Title: Scheduling n Jobs through m Machines Simulation
+
+Description:
+This simulation demonstrates a simple scheduling strategy for processing n jobs through m machines using the Shortest Job First (SJF) rule. The program assigns jobs to machines based on the lowest current load and displays the final load for each machine.
+
+Files:
+- upgraded_sequencing_simulation.cpp: The main C++ source file containing the implementation of the simulation.
+
+Classes and Structures:
+- Job: A structure representing a job with an ID and processing time.
+- Machine: A structure representing a machine with an ID and its current load.
+
+Functions:
+- bool compareProcessingTime(const Job& a, const Job& b): A comparison function used to sort the jobs based on their processing times in ascending order.
+- bool compareMachineLoad(const Machine& a, const Machine& b): A comparison function used to find the machine with the lowest current load.
+- void processJobs(std::vector<Job>& jobs, std::vector<Machine>& machines): A function that processes the jobs by assigning them to machines with the lowest current load.
+- int main(): The main function that creates vectors of jobs and machines, sorts the jobs based on the SJF rule, processes the jobs, and displays the final load for each machine.
+
+
+Customization and Improvements:
+- The number of jobs and machines can be adjusted by changing the values of `n` and `m` in the main function.
+- Different job processing times can be assigned by modifying the vector of `Job` instances.
+- The code can be extended to handle more advanced scheduling strategies, such as Johnson's rule for two machines or more advanced scheduling algorithms for n jobs and m machines.
+- Additional metrics, such as average waiting time, average turnaround time, and makespan, can be calculated and displayed.
+

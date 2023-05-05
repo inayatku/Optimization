@@ -1,0 +1,35 @@
+Title: Optimal Plant Layouts with Practical Considerations using Genetic Algorithm
+
+Description: This C++ program demonstrates a basic implementation of a genetic algorithm to find an optimal plant layout. The program assumes you have a 2D grid with a certain number of machines, and the objective is to minimize the total distance between machines.
+
+Functions:
+
+1. int calculate_distance(const Machine& a, const Machine& b)
+   - Calculates the distance between two machines.
+
+2. int calculate_total_distance(const std::vector<Machine>& layout)
+   - Calculates the total distance between all machines in the layout.
+
+3. std::vector<Machine> generate_random_layout(int num_machines, int grid_size)
+   - Generates a random layout of machines on the grid.
+
+4. std::vector<Machine> mutate_layout(const std::vector<Machine>& layout, int grid_size)
+   - Creates a mutated layout by randomly changing the position of one machine.
+
+5. int main()
+   - Entry point of the program.
+   - Initializes the grid size, number of machines, and number of iterations.
+   - Generates a random initial layout and calculates its total distance.
+   - Iteratively mutates the layout and updates the best layout based on the total distance.
+   - Prints the optimal layout with the minimized total distance.
+
+Example Output:
+
+Optimal layout with total distance: 18
+Machine 0 at (6, 9)
+Machine 1 at (5, 6)
+Machine 2 at (5, 8)
+Machine 3 at (5, 7)
+Machine 4 at (7, 9)
+
+This output indicates the optimal layout of machines on the grid with a minimized total distance.

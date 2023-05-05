@@ -1,0 +1,41 @@
+Title: 0/1 Knapsack Problem using Dynamic Programming
+
+Description: This C++ program demonstrates an implementation of dynamic programming to solve the 0/1 Knapsack Problem. The objective is to maximize the total value of items packed in a knapsack of limited capacity, given the weights and values of a set of items.
+
+Structs:
+
+1. Item
+   - value: The value of the item.
+   - weight: The weight of the item.
+
+Functions:
+
+1. int knapsack(const std::vector<Item>& items, int max_weight)
+   - Takes a vector of items (with values and weights) and the maximum weight the knapsack can hold.
+   - Returns the maximum value of items that can be packed in the knapsack.
+   - Uses dynamic programming to build a table (dp) that stores the maximum value that can be obtained using a subset of items with a limited total weight.
+   - The table is filled iteratively, considering the items one by one and the weights from 1 to max_weight.
+   - If the weight of the current item is less than or equal to the current weight, the table entry is updated with the maximum value between the previous entry and the sum of the value of the current item and the value obtained from the remaining weight.
+   - If the weight of the current item is greater than the current weight, the table entry is updated with the previous entry.
+
+2. int main()
+   - Entry point of the program.
+   - Initializes a vector of items with their values and weights, and the maximum weight of the knapsack.
+   - Calls the knapsack function to obtain the maximum value of items that can be packed in the knapsack.
+   - Prints the maximum value.
+
+Example Input:
+
+Items with their values and weights:
+
+Item 1: {60, 10}
+Item 2: {100, 20}
+Item 3: {120, 30}
+
+Maximum weight of the knapsack: 50
+
+Example Output:
+
+Maximum value of items that can be packed in the knapsack: 220
+
+This output indicates that the maximum value that can be obtained by packing items in the knapsack with the given constraints is 220.

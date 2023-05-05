@@ -1,0 +1,35 @@
+Title: Critical Path Method (CPM) Implementation in C++
+
+Description: This C++ program calculates the project duration and critical path of a given set of tasks using the Critical Path Method (CPM). Each task has an ID, duration, and a list of predecessor tasks that must be completed before it can begin.
+
+Structures:
+
+1. Task: Represents a task in the project.
+    - int id: Unique identifier of the task.
+    - int duration: Duration of the task.
+    - std::vector<int> predecessors: List of predecessor tasks.
+
+Functions:
+
+1. void find_critical_path(const std::vector<Task>& tasks, int task_id, const std::vector<int>& earliest_start, std::vector<int>& critical_path)
+   - Finds the critical path of the project.
+   - Parameters:
+        - tasks: A vector of Task objects.
+        - task_id: The ID of the current task.
+        - earliest_start: A vector of the earliest start times for each task.
+        - critical_path: A vector that stores the critical path.
+
+2. int main()
+   - Entry point of the program.
+   - Initializes a vector of Task objects with task information.
+   - Calculates the earliest start time for each task.
+   - Finds the maximum duration of the project.
+   - Calls the find_critical_path function to find the critical path.
+   - Prints the project duration and critical path.
+
+Example Output:
+
+Project duration: 17
+Critical path: Task 0 -> Task 1 -> Task 3 -> End
+
+This output indicates that the project will take 17 units of time to complete, and the critical path consists of the sequence of tasks 0, 1, and 3.

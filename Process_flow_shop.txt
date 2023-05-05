@@ -1,0 +1,40 @@
+Title: Flow Shop Scheduling using Johnson's Algorithm
+
+Description: This C++ program demonstrates an implementation of Johnson's algorithm for solving the flow shop scheduling problem when there are two machines. The objective is to minimize the maximum flow time of all jobs.
+
+Structs:
+
+1. Job
+   - id: The unique identifier of the job.
+   - time_m1: The processing time on machine 1.
+   - time_m2: The processing time on machine 2.
+
+Functions:
+
+1. std::vector<Job> johnsons_algorithm(const std::vector<Job>& jobs)
+   - Takes a vector of jobs and returns an optimal sequence of jobs to minimize the maximum flow time.
+   - Sorts the jobs based on the minimum processing time between the two machines.
+   - Schedules jobs with smaller processing time on machine 1 to the front of the sequence.
+   - Schedules jobs with smaller processing time on machine 2 to the back of the sequence.
+
+2. int main()
+   - Entry point of the program.
+   - Initializes a vector of jobs with their processing times on two machines.
+   - Calls the johnsons_algorithm function to obtain the optimal job sequence.
+   - Prints the optimal job sequence.
+
+Example Input:
+
+Jobs with their processing times on two machines:
+
+Job 0: {6, 2}
+Job 1: {8, 7}
+Job 2: {1, 5}
+Job 3: {4, 6}
+Job 4: {3, 9}
+
+Example Output:
+
+Optimal job sequence: 2 0 3 1 4
+
+This output indicates the optimal sequence of jobs to minimize the maximum flow time.
